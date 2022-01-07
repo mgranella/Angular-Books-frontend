@@ -14,12 +14,9 @@ export class DetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private apiservice: ApiService) { }
 
-  //ngOnInit(): void {
-    async ngOnInit() {
+  async ngOnInit() {
     this.bookId = parseInt(String(this.route.snapshot.paramMap.get('id')));
-
     this.book = await this.apiservice.get(this.bookId);
-    console.log(`this.book:: ${JSON.stringify(this.book)}`);
   }
 
 }
