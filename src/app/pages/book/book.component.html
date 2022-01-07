@@ -1,0 +1,9 @@
+<p>book works!</p>
+<div class='container'>
+    <div class='header'>BOOKS::</div>
+    <div class='body'>
+        <!-- <div class='block' *ngFor='let book of books'><img class='image' src='{{book.formats["image/jpeg"]}}' (click)='showDetail(book.id)' /><div class='name'>{{book.title}}</div></div> -->
+        <div class='block' *ngFor='let book of books'><img class='image' src='{{book.image}}' (click)='showDetail(book.id)' /><div class='name'>{{book.title}}</div></div>
+    </div>
+    <div class='footer'>THIS IS MY FOOTER</div>        
+</div>

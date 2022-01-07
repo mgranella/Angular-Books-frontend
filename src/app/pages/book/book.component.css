@@ -1,0 +1,37 @@
+.header {
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.body {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.block{
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+.block:hover{
+    cursor:pointer;
+    background-color: blueviolet;
+    border-style: solid;
+    border-color:darkmagenta;
+    border-width: 5px;
+}
+
+.image{
+    width: 50%;
+    height: 50%;
+}
+
+.name{
+    font-style: italic;
+}
