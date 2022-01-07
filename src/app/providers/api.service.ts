@@ -24,17 +24,13 @@ export class ApiService {
         this.httpClient.get(this.url).subscribe(
           data => {
             let orderedJson:Book[];
-            //orderedJson = JSON.parse(JSON.stringify(data)).results.sort((a:any,b:any) => {return a.id-b.id}); //sort numbers
-            // orderedJson = JSON.parse(JSON.stringify(data)).results.sort((a:any,b:any) => (a.title).localeCompare(b.title)); //sort strings <--THIS WORKS
             orderedJson = JSON.parse(JSON.stringify(data)).results.sort((a:any,b:any) => (a.title).localeCompare(b.title)).map((x: { id: number; title: string; formats:any}) => (
-              //console.log(`x:: ${JSON.stringify(x)}`)
-              {          
-                id: x.id,
-                title: x.title,
-                image: x.formats['image/jpeg']
-              }
-            )); //sort strings
-            ////console.log(`orderedJson:: ${JSON.stringify(orderedJson)}`);
+            {          
+              id: x.id,
+              title: x.title,
+              image: x.formats['image/jpeg']
+            }
+            ));
             res(orderedJson);
           }          
         );
